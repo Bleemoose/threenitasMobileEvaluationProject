@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">testProject</string>
+    <string name ="login_label">Login</string>
+    <string name ="username_label">Username</string>
+    <string name ="username_placeholder">Enter your username</string>
+    <string name="info_button_text">At least 8 characters(2 capital,3 normal, 1 special, 2 numbers)</string>
+    <string name="wrong_credential_title">Wrong Credentials</string>
+    <string name="wrong_credential_description">You have submitted wrong credentials</string>
+    <string name="error_bubble_button_content">Back</string>
+    <string name ="password_placeholder">Enter your password</string>
+    <string name ="password_label">Password</string>
+    <string name ="show_password">Show</string>
+    <string name ="hide_password">Hide</string>
+
+</resources>
