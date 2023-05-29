@@ -6,7 +6,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import com.example.testproject.R
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -25,6 +24,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.example.testproject.R
 import java.util.Locale
 
 
@@ -85,14 +85,14 @@ fun LanguagePickerDropdownMenu(modifier: Modifier) {
 
             LanguagePickerChoices(LanguageType.GREEK) {
                 if (selectedLanguageText.value != (LanguageType.GREEK.language)) {
-                    switchLocale(LanguageType.GREEK.languageCode, context)
+                    switchLanguage(LanguageType.GREEK.languageCode, context)
                     selectedLanguageImage.value = R.drawable.greece_flag_round_icon
                     selectedLanguageText.value = "Greek"
                 }
             }
             LanguagePickerChoices(LanguageType.ENGLISH){
                 if (selectedLanguageText.value != (LanguageType.ENGLISH.language)) {
-                    switchLocale(LanguageType.ENGLISH.languageCode, context)
+                    switchLanguage(LanguageType.ENGLISH.languageCode, context)
                     selectedLanguageImage.value = R.drawable.united_states_of_america_flag_round
                     selectedLanguageText.value = "English"
                 }
@@ -131,6 +131,14 @@ private fun LanguagePickerChoices(languageType: LanguageType, onLanguageClick: (
     }
 }
 
-private fun switchLocale(language: String, context: Context) {
-    //Handle language change here
+private fun switchLanguage(language: String, context: Context) {
+    context.resources.apply {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val resources = context.resources
+        val configuration = resources.configuration
+        configuration.setLocale(locale)
+        resources.configuration.updateFrom(configuration)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
+    }
 }

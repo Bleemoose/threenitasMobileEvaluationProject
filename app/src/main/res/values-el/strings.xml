@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">testProject</string>
+    <string name="login_label">Σύνδεση</string>
+    <string name="username_label">Όνομα Χρήστη</string>
+    <string name="username_placeholder">Παρακαλω Εισαγετε το Όνομα Χρήστη</string>
+    <string name="info_button_text">τουλάχιστον 8 χαρακτήρες(2 κεφαλαία,3 πεζά, 1 ειδικός χαρακτήρας, 2 νούμερα)</string>
+    <string name="wrong_credential_title">Λάθος Στοιχεία</string>
+    <string name="wrong_credential_description">Έχετε υποβάλλει λάθος στοιχεία</string>
+    <string name="error_bubble_button_content">Επιστροφή</string>
+    <string name="password_placeholder">Εισαγετε Κωδικό</string>
+    <string name="password_label">Κωδικός</string>
+    <string name="show_password">Προβολή</string>
+    <string name="hide_password">Απόκρυψη</string>
+
+
+</resources>
